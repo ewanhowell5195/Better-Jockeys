@@ -1,6 +1,6 @@
 {
 	"credit": "By Ewan Howell",
-	"textureSize": [64, 32],
+	"textureSize": [128, 64],
 	"models": [
 		{
 			"part": "head",
@@ -13,23 +13,31 @@
 					"invertAxis": "xy",
 					"translate": [0, 0, 0],
 					"boxes": [
-						{"coordinates": [-4, 24, -4, 8, 8, 8], "textureOffset": [0, 0]}
+						{
+							"coordinates": [-4, 24, -4, 8, 8, 8],
+							"uvNorth": [16, 16, 32, 32],
+							"uvEast": [0, 16, 16, 32],
+							"uvSouth": [48, 16, 64, 32],
+							"uvWest": [32, 16, 48, 32],
+							"uvUp": [32, 16, 16, 0],
+							"uvDown": [48, 0, 32, 16]
+						}
 					]
 				},
 				{
 					"id": "head_spider_jockey",
-					"texture": "skeleton_spider_jockey.png",
 					"invertAxis": "xy",
 					"translate": [0, 0, 0],
+					"texture": "textures/entity/skeleton/skeleton_spider_jockey.png",
 					"boxes": [
 						{"coordinates": [-4, 24, -4, 8, 8, 8], "textureOffset": [0, 0]}
 					]
 				},
 				{
 					"id": "head_horse_jockey",
-					"texture": "skeleton_horse_jockey.png",
 					"invertAxis": "xy",
 					"translate": [0, 0, 0],
+					"texture": "textures/entity/skeleton/skeleton_horse_jockey.png",
 					"boxes": [
 						{"coordinates": [-4, 24, -4, 8, 8, 8], "textureOffset": [0, 0]}
 					]
@@ -83,25 +91,35 @@
 					"invertAxis": "xy",
 					"translate": [0, 0, 0],
 					"boxes": [
-						{"coordinates": [-4, 24, -4, 8, 8, 8], "textureOffset": [32, 0], "sizeAdd": 0.5}
+						{
+							"coordinates": [-4, 24, -4, 8, 8, 8],
+							"uvNorth": [80, 16, 96, 32],
+							"uvEast": [64, 16, 80, 32],
+							"uvSouth": [112, 16, 128, 32],
+							"uvWest": [96, 16, 112, 32],
+							"uvUp": [96, 16, 80, 0],
+							"uvDown": [112, 0, 96, 16],
+							"sizeAdd": 0.5
+						}
 					]
 				},
 				{
 					"id": "headwear_spider_jockey",
-					"texture": "skeleton_spider_jockey.png",
 					"invertAxis": "xy",
 					"translate": [0, 0, 0],
+					"texture": "textures/entity/skeleton/skeleton_spider_jockey.png",
 					"boxes": [
 						{"coordinates": [-4, 24, -4, 8, 8, 8], "textureOffset": [32, 0], "sizeAdd": 0.5}
 					]
 				},
 				{
 					"id": "headwear_horse_jockey",
-					"texture": "skeleton_horse_jockey.png",
 					"invertAxis": "xy",
 					"translate": [0, 0, 0],
+					"texture": "textures/entity/skeleton/skeleton_horse_jockey.png",
 					"boxes": [
-						{"coordinates": [-4, 24, -4, 8, 8, 8], "textureOffset": [32, 0], "sizeAdd": 0.5}
+						{"coordinates": [-4, 24, -4, 8, 8, 8], "textureOffset": [32, 0], "sizeAdd": 0.5},
+						{"coordinates": [-5, 29, -5, 10, 6, 10], "textureOffset": [64, 0], "sizeAdd": 0.25}
 					]
 				}
 			]
@@ -117,25 +135,92 @@
 					"invertAxis": "xy",
 					"translate": [0, 0, 0],
 					"boxes": [
-						{"coordinates": [-4, 12, -2, 8, 12, 4], "textureOffset": [16, 16]}
+						{
+							"coordinates": [-4, 12, -2, 8, 12, 4],
+							"uvNorth": [40, 40, 56, 64],
+							"uvEast": [32, 40, 40, 64],
+							"uvSouth": [64, 40, 80, 64],
+							"uvWest": [56, 40, 64, 64],
+							"uvUp": [56, 40, 40, 32],
+							"uvDown": [72, 32, 56, 40]
+						}
 					]
 				},
 				{
 					"id": "body_spider_jockey",
-					"texture": "skeleton_spider_jockey.png",
 					"invertAxis": "xy",
 					"translate": [0, 0, 0],
+					"texture": "textures/entity/skeleton/skeleton_spider_jockey.png",
 					"boxes": [
-						{"coordinates": [-4, 12, -2, 8, 12, 4], "textureOffset": [16, 16]}
+						{
+							"coordinates": [-4, 12, -2, 8, 12, 4],
+							"uvNorth": [20, 36, 28, 48],
+							"uvEast": [16, 36, 20, 48],
+							"uvSouth": [32, 36, 40, 48],
+							"uvWest": [28, 36, 32, 48],
+							"uvUp": [28, 36, 20, 32],
+							"sizeAdd": 0.5
+						},
+						{"coordinates": [-4, 12, -2, 8, 12, 4], "textureOffset": [16, 16]},
+						{
+							"coordinates": [-4, 12, -2.75, 8, 12, 0],
+							"uvNorth": [20, 48, 28, 59]
+						},
+						{
+							"coordinates": [-4, 12, 2.75, 8, 12, 0],
+							"uvSouth": [32, 48, 40, 59]
+						}
+					],
+					"submodels": [
+						{
+							"id": "quiver",
+							"invertAxis": "xy",
+							"translate": [3, 22.5, 4.1],
+							"rotate": [0, 0, -45],
+							"boxes": [
+								{"coordinates": [-2, -8, -1.5, 4, 8, 3], "textureOffset": [0, 53]},
+								{
+									"coordinates": [0, 0, -1.5, 0, 4, 3],
+									"uvWest": [0, 52, 3, 56]
+								},
+								{
+									"coordinates": [-1.5, 0, 0, 3, 4, 0],
+									"uvSouth": [0, 52, 3, 56]
+								}
+							]
+						}
 					]
 				},
 				{
 					"id": "body_horse_jockey",
-					"texture": "skeleton_horse_jockey.png",
 					"invertAxis": "xy",
 					"translate": [0, 0, 0],
+					"texture": "textures/entity/skeleton/skeleton_horse_jockey.png",
 					"boxes": [
-						{"coordinates": [-4, 12, -2, 8, 12, 4], "textureOffset": [16, 16]}
+						{"coordinates": [-4, 12, -2, 8, 12, 4], "textureOffset": [16, 16]},
+						{"coordinates": [-4, 12, -2, 8, 12, 4], "textureOffset": [16, 32], "sizeAdd": 0.25},
+						{"coordinates": [-8, 12, -0.75, 16, 12, 3], "textureOffset": [68, 17], "sizeAdd": 0.25},
+						{"coordinates": [-9.5, 19.5, -2, 5, 5, 5], "textureOffset": [48, 16], "sizeAdd": 0.25},
+						{"coordinates": [4.5, 19.5, -2, 5, 5, 5], "textureOffset": [48, 26], "sizeAdd": 0.25}
+					],
+					"submodels": [
+						{
+							"id": "quiver2",
+							"invertAxis": "xy",
+							"translate": [-5.7, 14, -3.775],
+							"rotate": [-79.75, 0, 0],
+							"boxes": [
+								{"coordinates": [-1.5, -8, -2, 3, 8, 4], "textureOffset": [48, 52]},
+								{
+									"coordinates": [0, 0, -1.5, 0, 4, 3],
+									"uvEast": [49, 52, 52, 56]
+								},
+								{
+									"coordinates": [-1.5, 0, 0, 3, 4, 0],
+									"uvNorth": [49, 52, 52, 56]
+								}
+							]
+						}
 					]
 				}
 			]
@@ -153,25 +238,34 @@
 					"mirrorTexture": "u",
 					"translate": [0, 0, 0],
 					"boxes": [
-						{"coordinates": [-6, 12, -1, 2, 12, 2], "textureOffset": [40, 16]}
+						{
+							"coordinates": [-6, 12, -1, 2, 12, 2],
+							"uvNorth": [88, 36, 84, 60],
+							"uvEast": [92, 36, 88, 60],
+							"uvSouth": [96, 36, 92, 60],
+							"uvWest": [84, 36, 80, 60],
+							"uvUp": [84, 36, 88, 32],
+							"uvDown": [88, 32, 92, 36]
+						}
 					]
 				},
 				{
 					"id": "left_arm_spider_jockey",
-					"texture": "skeleton_spider_jockey.png",
 					"invertAxis": "xy",
 					"mirrorTexture": "u",
 					"translate": [0, 0, 0],
+					"texture": "textures/entity/skeleton/skeleton_spider_jockey.png",
 					"boxes": [
+						{"coordinates": [-7, 12, -2, 3, 12, 4], "textureOffset": [48, 16], "sizeAdd": 0.25},
 						{"coordinates": [-6, 12, -1, 2, 12, 2], "textureOffset": [40, 16]}
 					]
 				},
 				{
 					"id": "left_arm_horse_jockey",
-					"texture": "skeleton_horse_jockey.png",
 					"invertAxis": "xy",
 					"mirrorTexture": "u",
 					"translate": [0, 0, 0],
+					"texture": "textures/entity/skeleton/skeleton_horse_jockey.png",
 					"boxes": [
 						{"coordinates": [-6, 12, -1, 2, 12, 2], "textureOffset": [40, 16]}
 					]
@@ -189,23 +283,32 @@
 					"invertAxis": "xy",
 					"translate": [0, 0, 0],
 					"boxes": [
-						{"coordinates": [4, 12, -1, 2, 12, 2], "textureOffset": [40, 16]}
+						{
+							"coordinates": [4, 12, -1, 2, 12, 2],
+							"uvNorth": [84, 36, 88, 60],
+							"uvEast": [80, 36, 84, 60],
+							"uvSouth": [92, 36, 96, 60],
+							"uvWest": [88, 36, 92, 60],
+							"uvUp": [88, 36, 84, 32],
+							"uvDown": [92, 32, 88, 36]
+						}
 					]
 				},
 				{
 					"id": "right_arm_spider_jockey",
-					"texture": "skeleton_spider_jockey.png",
 					"invertAxis": "xy",
 					"translate": [0, 0, 0],
+					"texture": "textures/entity/skeleton/skeleton_spider_jockey.png",
 					"boxes": [
-						{"coordinates": [4, 12, -1, 2, 12, 2], "textureOffset": [40, 16]}
+						{"coordinates": [4, 12, -2, 3, 12, 4], "textureOffset": [48, 32], "sizeAdd": 0.25},
+						{"coordinates": [4, 12, -1, 2, 12, 2], "textureOffset": [40, 32]}
 					]
 				},
 				{
 					"id": "right_arm_horse_jockey",
-					"texture": "skeleton_horse_jockey.png",
 					"invertAxis": "xy",
 					"translate": [0, 0, 0],
+					"texture": "textures/entity/skeleton/skeleton_horse_jockey.png",
 					"boxes": [
 						{"coordinates": [4, 12, -1, 2, 12, 2], "textureOffset": [40, 16]}
 					]
@@ -225,25 +328,43 @@
 					"mirrorTexture": "u",
 					"translate": [0, 0, 0],
 					"boxes": [
-						{"coordinates": [-3, 0, -1, 2, 12, 2], "textureOffset": [0, 16]}
+						{
+							"coordinates": [-3, 0, -1, 2, 12, 2],
+							"uvNorth": [8, 36, 4, 60],
+							"uvEast": [12, 36, 8, 60],
+							"uvSouth": [16, 36, 12, 60],
+							"uvWest": [4, 36, 0, 60],
+							"uvUp": [4, 36, 8, 32],
+							"uvDown": [8, 32, 12, 36]
+						}
 					]
 				},
 				{
 					"id": "left_leg_spider_jockey",
-					"texture": "skeleton_spider_jockey.png",
 					"invertAxis": "xy",
 					"mirrorTexture": "u",
 					"translate": [0, 0, 0],
+					"texture": "textures/entity/skeleton/skeleton_spider_jockey.png",
 					"boxes": [
+						{"coordinates": [-3, 0, -1, 2, 12, 2], "textureOffset": [8, 16], "sizeAdd": 0.25},
 						{"coordinates": [-3, 0, -1, 2, 12, 2], "textureOffset": [0, 16]}
 					]
 				},
 				{
 					"id": "left_leg_horse_jockey",
-					"texture": "skeleton_horse_jockey.png",
 					"invertAxis": "xy",
 					"mirrorTexture": "u",
 					"translate": [0, 0, 0],
+					"texture": "textures/entity/skeleton/skeleton_horse_jockey.png",
+					"submodels": [
+						{
+							"invertAxis": "xy",
+							"mirrorTexture": "u",
+							"boxes": [
+								{"coordinates": [-4, 2.1, -1.9, 4, 10, 4], "textureOffset": [0, 48]}
+							]
+						}
+					],
 					"boxes": [
 						{"coordinates": [-3, 0, -1, 2, 12, 2], "textureOffset": [0, 16]}
 					]
@@ -261,24 +382,34 @@
 					"invertAxis": "xy",
 					"translate": [0, 0, 0],
 					"boxes": [
-						{"coordinates": [1, 0, -1, 2, 12, 2], "textureOffset": [0, 16]}
+						{
+							"coordinates": [1, 0, -1, 2, 12, 2],
+							"uvNorth": [4, 36, 8, 60],
+							"uvEast": [0, 36, 4, 60],
+							"uvSouth": [12, 36, 16, 60],
+							"uvWest": [8, 36, 12, 60],
+							"uvUp": [8, 36, 4, 32],
+							"uvDown": [12, 32, 8, 36]
+						}
 					]
 				},
 				{
 					"id": "right_leg_spider_jockey",
-					"texture": "skeleton_spider_jockey.png",
 					"invertAxis": "xy",
 					"translate": [0, 0, 0],
+					"texture": "textures/entity/skeleton/skeleton_spider_jockey.png",
 					"boxes": [
-						{"coordinates": [1, 0, -1, 2, 12, 2], "textureOffset": [0, 16]}
+						{"coordinates": [1, 0, -1, 2, 12, 2], "textureOffset": [8, 32], "sizeAdd": 0.25},
+						{"coordinates": [1, 0, -1, 2, 12, 2], "textureOffset": [0, 32]}
 					]
 				},
 				{
 					"id": "right_leg_horse_jockey",
-					"texture": "skeleton_horse_jockey.png",
 					"invertAxis": "xy",
 					"translate": [0, 0, 0],
+					"texture": "textures/entity/skeleton/skeleton_horse_jockey.png",
 					"boxes": [
+						{"coordinates": [0, 2.1, -1.9, 4, 10, 4], "textureOffset": [16, 48]},
 						{"coordinates": [1, 0, -1, 2, 12, 2], "textureOffset": [0, 16]}
 					]
 				}
